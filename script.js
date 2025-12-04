@@ -33,7 +33,9 @@ console.log("Задача 2: " + getStringLength("jefjef"))
 
 */
 
-const getStringFromTemplate = (firstName, lastName) => 'Hello, ' + firstName + ' ' + lastName + '!'
+const getStringFromTemplate = (firstName, lastName) => {
+  return `Hello, ${firstName} ${lastName}!`;
+}
 console.log("Задача 3: " + getStringFromTemplate("ALex", "BRO"))
 
 //Задача 4
