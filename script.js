@@ -83,9 +83,17 @@ console.log("Задача 5: " + removeFirstOccurrences("alexloh", "loh"))
 */
 console.log("Задача 6: ")
 
-const getRectangleString = (w, h) => {
-    for(let i = 0; i < h; i++){
-        console.log("*".repeat(w));
+const getRectangleString = (width, height) => {
+    if (width < 2 || height < 2) return '*'.repeat(width);
+    const top = '*'.repeat(width);
+    const middle = '*' + ' '.repeat(width - 2) + '*';
+    const bottom = '*'.repeat(width);
+    let result = top + '\n';
+    for (let i = 0; i < height - 2; i++) {
+        result += middle + '\n';
     }
+    result += bottom;
+    return result;
 }
-getRectangleString(6, 3);
+
+console.log(getRectangleString(5, 4))
